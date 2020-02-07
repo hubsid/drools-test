@@ -1,0 +1,8 @@
+package com.sidh.drools.test.conf.model
+
+rule "licenseagevalidation"
+    when
+        a : Applicant(age < 18)
+    then
+        a.setValid(false);
+end
